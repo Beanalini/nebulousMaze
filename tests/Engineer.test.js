@@ -17,20 +17,16 @@ describe("Engineer", () =>  {
     });
     describe("class functions", () => {
         
-        test("getRole()", () => {
+        test("getRole() returns stored value", () => {
             const role = "Engineer";
             const emp = new Engineer("Debra", 7, "dat826@gmail.com", "Beanalini")
             expect(emp.getRole()).toEqual(role);
         });
-        test("getGitHub()", () => {
+        test("getGitHub() returns stored value", () => {
             const github = "Beanalini";
             const emp = new Engineer("Debra", 7, "dat826@gmail.com", github);
             expect(emp.getGitHub()).toEqual(github);
         });
         
     });
-
-
-
-
 });

@@ -26,17 +26,17 @@ describe("Employee", () =>  {
     });
     describe("class functions", () => {
         
-        test("getName()", () => {
+        test("getName() returns stored value", () => {
             const name = "Debra";
             const emp = new Employee(name)
             expect(emp.getName()).toEqual(name);
         });
-        test("getId()", () => {
+        test("getId() returns stored value", () => {
             const id = 7;
             const emp = new Employee("Debra", id);
             expect(emp.getId()).toEqual(id);
         });
-        test("getEmail()", () => {
+        test("getEmail() returns stored value", () => {
             const email = "dat826@gmail.com";
             const emp = new Employee("Debra", 7, email);
             expect(emp.getEmail()).toEqual(email);
