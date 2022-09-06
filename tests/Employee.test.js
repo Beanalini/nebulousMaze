@@ -25,9 +25,7 @@ describe("Employee", () =>  {
         });
     });
     describe("class functions", () => {
-        test("", () => {
-            
-        });
+        
         test("getName()", () => {
             const name = "Debra";
             const emp = new Employee(name)
@@ -44,8 +42,4 @@ describe("Employee", () =>  {
             expect(emp.getEmail()).toEqual(email);
         });
     });
-
-
-
-
 });
