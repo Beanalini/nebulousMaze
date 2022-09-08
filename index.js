@@ -7,7 +7,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-
+const buildTeamPage = require("./lib/buildTeamPage");
 //Array used to store the team members data
 let teamArr = [];
 
@@ -44,13 +44,12 @@ const userMainMenu = () => {
                 break;
             case "Team complete: Create team profile":
                 createTeamProfile();
-                //console.log("Creating Team profile...");
+                console.log("Creating Team profile...");
                 break;
         }
         
     })
 }
-
 
 
 const getInternData = () => {
@@ -78,7 +77,7 @@ const getInternData = () => {
 
    ]).then((response) => {
     //create new instance of the Intern class
-    const intern = new Intern(response.managerengineerName, response.EmployeeID, response.email, response.school);
+    const intern = new Intern(response.internName, response.EmployeeID, response.email, response.school);
     //Add the engineer to the team profile array
     teamArr.push(intern);
     //Take the user back to the main main menu
@@ -112,7 +111,7 @@ const getEngineerData = () => {
 
    ]).then((response) => {
     //create new instance of the Engineer class
-    const engineer = new Engineer(response.managerengineerName, response.EmployeeID, response.email, response.githubUsn);
+    const engineer = new Engineer(response.engineerName, response.EmployeeID, response.email, response.githubUsn);
     //Add the engineer to the team profile array
     teamArr.push(engineer);
     //Take the user back to the main main menu
@@ -160,11 +159,11 @@ const getManagerData = () => {
 const createTeamProfile = () => {
     //call the userAnswers() to display the prompts
     console.log(teamArr);
-    /*fs.writeFile('sampleREADME.md', generateMarkdown(data), (error) => {
+    /*fs.writeFile('test.html', buildTeamPage(teamArr), (error) => {
           const outputMsg = (error)? 'Error has occured':'README file has been generated successfully';
           console.log(outputMsg)
-    }) */
-          
+    })  */     
+    buildTeamPage(teamArr);  
 };
 
   //This function initialises the team profile generator
@@ -172,5 +171,5 @@ const init = () => {
     userMainMenu();
 };
 
-//call functoin to run the profile generator App
+//call function to run the profile generator App
 init();
