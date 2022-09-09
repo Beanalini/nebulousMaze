@@ -8,14 +8,12 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const buildTeamPage = require("./lib/buildTeamPage");
-//Array used to store the team members data
+//Array used to store the team members responses
 let teamArr = [];
 
-//main menu questions
+//main menu questions - ask the user which type of role thay want to add to the profile
 const userMainMenu = () => {
-
-    return inquirer.prompt([
-        
+    return inquirer.prompt([        
         {
             type: 'list',
             name: 'mainMenu',
@@ -43,7 +41,8 @@ const userMainMenu = () => {
                //console.log("Intern selected");
                 break;
             case "Team complete: Create team profile":
-                createTeamProfile();
+                //buildTeamPage() takes the user responses and builds the profile page;
+                buildTeamPage(teamArr); 
                 console.log("Creating Team profile...");
                 break;
         }
@@ -51,7 +50,7 @@ const userMainMenu = () => {
     })
 }
 
-
+//getInternData() requests profile data for an Intern 
 const getInternData = () => {
     return inquirer.prompt([
         {
@@ -67,7 +66,14 @@ const getInternData = () => {
         {
             type: "input",
             name: "email",
-            message: "Please enter the intern's  Email address:"        
+            message: "Please enter the intern's  Email address:",
+            validate: (answer) => {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                if(!emailRegex.test(answer)) {
+                    return "Please provide a valid email address!"
+                }
+                return true
+            }             
         },
         {
             type: "input",
@@ -78,14 +84,14 @@ const getInternData = () => {
    ]).then((response) => {
     //create new instance of the Intern class
     const intern = new Intern(response.internName, response.EmployeeID, response.email, response.school);
-    //Add the engineer to the team profile array
+    //Add the intern reposnses to the team profile array
     teamArr.push(intern);
-    //Take the user back to the main main menu
+    //Take the user back to the main menu
     userMainMenu();
-    //console.log(teamArr);
+    
    })
 };
-
+//getEngineerData() requests profile data for an Engineer
 const getEngineerData = () => {
     return inquirer.prompt([
         {
@@ -101,12 +107,20 @@ const getEngineerData = () => {
         {
             type: "input",
             name: "email",
-            message: "Please enter the engineer's  Email address:"        
+            message: "Please enter the engineer's Email address:",
+            validate: (answer) => {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                if(!emailRegex.test(answer)) {
+                    return "Please provide a valid email address!"
+                }
+                return true
+            }        
         },
         {
             type: "input",
             name: "githubUsn",
-            message: "Please enter the engineer's  GitHub user name:"        
+            message: "Please enter the engineer's  GitHub user name:",
+              
         }
 
    ]).then((response) => {
@@ -116,10 +130,10 @@ const getEngineerData = () => {
     teamArr.push(engineer);
     //Take the user back to the main main menu
     userMainMenu();
-    //console.log(teamArr);
+    
    })
 };
-
+//getManagerData() requests profile data for a Manager
 const getManagerData = () => {
     return inquirer.prompt([
         {
@@ -135,7 +149,15 @@ const getManagerData = () => {
         {
             type: "input",
             name: "email",
-            message: "Please enter the manager's Email address:"        
+            message: "Please enter the manager's Email address:",
+            validate: (answer) => {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                if(!emailRegex.test(answer)) {
+                    return "Please provide a valid email address!"
+                }
+                return true
+            }        
+                                
         },
         {
             type: "input",
@@ -150,24 +172,13 @@ const getManagerData = () => {
     teamArr.push(manager);
     //Take the user back to the main main menu
     userMainMenu();
-    //console.log(teamArr);
+    
    })
 };
 
-
-// This functon inititalises the app
-const createTeamProfile = () => {
-    //call the userAnswers() to display the prompts
-    console.log(teamArr);
-    /*fs.writeFile('test.html', buildTeamPage(teamArr), (error) => {
-          const outputMsg = (error)? 'Error has occured':'README file has been generated successfully';
-          console.log(outputMsg)
-    })  */     
-    buildTeamPage(teamArr);  
-};
-
-  //This function initialises the team profile generator
+//This function initialises the team profile generator
 const init = () => {
+    //This function starts the user prompt questions
     userMainMenu();
 };
 
