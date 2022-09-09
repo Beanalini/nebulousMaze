@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "author": "Debra Constantinou",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4",

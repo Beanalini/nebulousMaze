@@ -6,7 +6,7 @@ describe("Employee", () =>  {
         test("initalise an Employee object", () => {
             const emp = new Employee();
             expect(emp instanceof Employee).toEqual(true);
-            //expect(typeof(emp)===({}));
+            
         });
         test("it should create a employee object with the name property set to the name argument passed with the constructor call", () => {
             const name = "Debra";

@@ -1,4 +1,5 @@
 //Include packages needed for the team profile generator
+//inquirer version 8.2.4 is used in this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 
@@ -168,7 +169,7 @@ const getManagerData = () => {
    ]).then((response) => {
     //create new instance of the manager class
     const manager = new Manager(response.managerName, response.EmployeeID, response.email, response.officeNum);
-    //Add the mamanger to the team profile array
+    //Add the manager to the team profile array
     teamArr.push(manager);
     //Take the user back to the main main menu
     userMainMenu();
