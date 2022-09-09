@@ -97,9 +97,13 @@ THEN I exit the application, and the HTML is generated
   ## Tests
 
   
-  Test have been implemented using Jest Testing Framework.
+  Test have been implemented using Jest Testing Framework to test the Employee, Mamanger, Engineer and Intern classes.  
 
-    To run the Jest tests, run the terminal command, ```npm test```
+      To run the Jest tests run the terminal command, ```npm test```
+
+  The test result for all four classes are shown in the screen shot below: 
+
+    ![jest test results](./assets/images/jestTests.png)
 
   ## Technologies Used
   - HTML
