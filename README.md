@@ -89,13 +89,14 @@ THEN I exit the application, and the HTML is generated
   
   The following screen shot shows the prompts displayed to the user along with user answers
 
-  ![terminal view](./assets/images/)
+  ![terminal command-line prompts](./assets/images/)
 
 
   The screen shot below displays the  HTML webpage generated from the user responses to the question prompts.
 
   ## Tests
 
+  ![team profile webpage](./assets/images/)
   
   Test have been implemented using Jest Testing Framework to test the Employee, Mamanger, Engineer and Intern classes.  
 

@@ -8,7 +8,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const buildTeamPage = require("./lib/buildTeamPage");
+const createTeamPage = require("./lib/createTeamPage");
 //Array used to store the team members responses
 let teamArr = [];
 
@@ -43,8 +43,8 @@ const userMainMenu = () => {
                 break;
             case "Team complete: Create team profile":
                 //buildTeamPage() takes the user responses and builds the profile page;
-                buildTeamPage(teamArr); 
-                console.log("Creating Team profile...");
+                createTeamPage(teamArr); 
+                console.log("\u001B[33m	Creating Team profile...\u001B[0m");
                 break;
         }
         
