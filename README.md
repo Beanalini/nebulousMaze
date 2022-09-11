@@ -81,22 +81,33 @@ THEN I exit the application, and the HTML is generated
 
   ## Walk-through Video
 
-  A  walk-through video demonstrating the functionality of the Team Profile Generator can be viewed at the following link:
+  A  walk-through video demonstrating the functionality of the Team Profile Generator, and passing the Jest tests from the command line, can be viewed at the following link:
 
-- [Team Profile Generator walk-through video]()
+- [Team Profile Generator walk-through video](https://drive.google.com/file/d/1NG-fQs-FbIZfH78yPU0ej_WL71W1fOrH/view)
+
+- [Team Profile Generator walk-through video](https://watch.screencastify.com/v/YtarrX9BuBTGGttrptIv)
 
   ### Screen Shots 
   
-  The following screen shot shows the prompts displayed to the user along with user answers
+  The following screen shot shows the prompts displayed to the user along with user answers.
 
-  ![terminal command-line prompts](./assets/images/)
+  ![terminal command-line prompts](./assets/images/prompts.png)
+  
 
+  The following screen shot shows the user prompts and anwers and response to the user aftr the profile has been generated.
+
+  ![terminal command-line profile created successfully](./assets/images/profile-success.png) 
 
   The screen shot below displays the  HTML webpage generated from the user responses to the question prompts.
 
+   ![team profile webpage](./assets/images/profileWebPage.png)
+
+
+  
+
   ## Tests
 
-  ![team profile webpage](./assets/images/)
+ 
   
   Test have been implemented using Jest Testing Framework to test the Employee, Mamanger, Engineer and Intern classes.  
 
