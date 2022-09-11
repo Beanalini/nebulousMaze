@@ -4,22 +4,22 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Walk-through Video](walk-through-video)
+  * [Walk-through Video](#walk-through-video)
   * [Tests](#tests)
   * [Technologies Used](#technologies-used)
-  * [credits](#credits)
+  * [Credits](#credits)
   * [Questions](#questions)
-  * [How to Contribute](#How-to-Contribute)   
+  * [How to Contribute](#how-to-contribute)   
   * [License](#license)
   
   ## Description
   
-  Having quick access to team members information details, such as email and Github profiles, is the motivation behind building a profile generator application. 
+  The motovatoin behind this project is to provide a quick and easyily accessible route to team members information details, such as email and Github profiles.
 
   The Team Profile Generator developed in this project is a command-line application that dynamically generates an HTML webpage which displays profile information for each team member, in response to a set of question prompts. This application uses Node JS and the npm inquirer version 8.2.4 package to provide the command-line user interface. Basic unit tests have been implemented using the npm Jest package along with validation testing of user input email address.  
   
   Future developments:
-  - Further validation tests of user input data
+  - Implement further validation tests of user input data.
  
   ### Functional Requirements
 
@@ -64,7 +64,7 @@ THEN I exit the application, and the HTML is generated
   - To run the Team Profile Generator App:
   
   - Enter ```node index.js``` at the terminal command-line prompt.
-  - You will then be presented with the main menu which gives you the option to add a manager, engineer, intern or finish building the team. Navigate the options using the arrow keys and press enter to submit your selection.
+  - You will then be presented with the main menu which gives you the option to select an employee type (Manager, Engineer or Intern) or to generate the team profile Navigate the options using the arrow keys and press enter to submit your selection.
     - If you select Manager, you will be asked to enter name, employee ID, email address and office number.
     - If you select Engineer, you will be asked to enter name, employee ID, email address and GitHub user name.
     - If you select Intern, you will be asked to enter name, employee ID, email address and school.
@@ -83,7 +83,7 @@ THEN I exit the application, and the HTML is generated
 
   A  walk-through video demonstrating the functionality of the Team Profile Generator, and passing the Jest tests from the command line, can be viewed at the following link:
 
-- [Team Profile Generator walk-through video](https://drive.google.com/file/d/1NG-fQs-FbIZfH78yPU0ej_WL71W1fOrH/view)
+
 
 - [Team Profile Generator walk-through video](https://watch.screencastify.com/v/YtarrX9BuBTGGttrptIv)
 
@@ -113,7 +113,7 @@ THEN I exit the application, and the HTML is generated
 
       To run the Jest tests run the terminal command, ```npm test```
 
-  The test result for all four classes are shown in the screen shot below: 
+  The test results for all four classes are shown in the screen shot below: 
 
     ![jest test results](./assets/images/jestTests.png)
 
@@ -136,7 +136,7 @@ THEN I exit the application, and the HTML is generated
 
 
   
-  ## Contributing
+  ## How to Contribute
   If you would like to contribute to this project you can contact me by email at dat826@gmail.com or through  GitHub account   @[Beanalini](https://github.com/Beanalini).
   
 
